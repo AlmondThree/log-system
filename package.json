@@ -1,0 +1,30 @@
+{
+  "name": "log-system",
+  "version": "0.0.1",
+  "description": "Package for Log-system",
+  "main": "apps.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/project-may/administration-process-system.git"
+  },
+  "keywords": [
+    "log-system"
+  ],
+  "author": "AlmondThree",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/project-may/administration-process-system/issues"
+  },
+  "homepage": "https://gitlab.com/project-may/administration-process-system#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0"
+  }
+}
