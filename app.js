@@ -1,6 +1,9 @@
 // Dotenv
 require('dotenv').config()
 
+//cors
+const cors = require('cors');
+
 // Express App
 const express = require('express')
 
@@ -10,6 +13,7 @@ const app = express()
 
 const port = process.env.PORT_HOST
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
