@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 //System Logs
-const SystemLogObject = require("../../models/systems-log/systemLogObject")
+const SystemLogObject = require("../../models/systems-log/SystemLogObject")
 const {
   insertSystemLog,
 } = require("../../service/systems-log/pushSystemLog");
