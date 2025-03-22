@@ -108,6 +108,8 @@ router.route("/session").post(async (req, res) => {
       reqBody["roles"],
       reqBody["access_token"],
       reqBody["exp_access_token"],
+      reqBody["refresh_token"],
+      reqBody["exp_refresh_token"],
       reqBody["device_id"],
       reqBody["is_active"]
     );
