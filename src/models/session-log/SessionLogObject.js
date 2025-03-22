@@ -2,6 +2,7 @@ const Filter = require("../../utils/mongodb/Filter");
 
 class SessionLogObject {
   constructor(
+    id_session,
     id_activity,
     timestamp,
     user_id,
@@ -16,6 +17,7 @@ class SessionLogObject {
     start_date,
     end_date
   ) {
+    (this.id_session = id_session),
     (this.id_activity = id_activity),
       (this.timestamp = timestamp),
       (this.user_id = user_id),
@@ -37,6 +39,7 @@ class SessionLogObject {
     const expRefreshTokenIso = new Date(this.exp_refresh_token);
 
     let object = {
+      _id: this.id_session,
       id_activity: this.id_activity,
       timestamp: this.timestamp == null ? dateTimestamp : this.timestamp,
       user_id: this.user_id,

@@ -101,6 +101,7 @@ router.route("/session").post(async (req, res) => {
 
   if (reqBody != null) {
     let sessionLogObjImpl = new SessionLogObject(
+      reqBody["id_session"],
       reqBody["id_activity"],
       reqBody["timestamp"],
       reqBody["user_id"],
