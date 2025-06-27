@@ -30,6 +30,7 @@ async function getListSystemLog(paramPage, paramLimit, paramFilter) {
         .db("db_logs")
         .collection("system_logs")
         .find(paramFilter)
+        .sort({timestamp: -1})
         .limit(parseInt(paginationAttr['limit']))
         .skip(parseInt(paginationAttr['skipValue']))
         .toArray();
