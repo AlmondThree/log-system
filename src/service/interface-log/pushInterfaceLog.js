@@ -13,7 +13,7 @@ async function insertInterfaceLog(logObj) {
   if (typeof logObj === "object") {
     //push data
     try {
-      client
+      await client
         .db("db_logs")
         .collection("api_logs")
         .insertOne(logObj, function (err, res) {
