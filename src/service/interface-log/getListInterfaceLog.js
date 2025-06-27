@@ -62,6 +62,8 @@ async function getListInterfaceLog(paramPage, paramLimit, paramFilter) {
       responseStatus: 400,
       responseMessage: e,
     };
+  } finally {
+    await client.close();
   }
 
   return response;
