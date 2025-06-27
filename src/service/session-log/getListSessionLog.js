@@ -30,6 +30,7 @@ async function getListSessionLog(paramPage, paramLimit, paramFilter) {
         .db("db_logs")
         .collection("session_logs")
         .find(paramFilter)
+        .sort({timestamp: -1})
         .limit(parseInt(paginationAttr['limit']))
         .skip(parseInt(paginationAttr['skipValue']))
         .toArray();

@@ -13,7 +13,7 @@ async function insertSessionLog(logObj) {
   if (typeof logObj === "object") {
     //push data
     try {
-      client
+      await client
         .db("db_logs")
         .collection("session_logs")
         .insertOne(logObj, function (err, res) {
@@ -24,8 +24,8 @@ async function insertSessionLog(logObj) {
         })
     } catch (e) {
       console.log(e);
-    }finally {
-      await client.close();
+    } finally {
+      await client.close()
     }
   }
   return response;
