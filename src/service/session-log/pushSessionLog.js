@@ -24,6 +24,8 @@ async function insertSessionLog(logObj) {
         })
     } catch (e) {
       console.log(e);
+    }finally {
+      await client.close();
     }
   }
   return response;
