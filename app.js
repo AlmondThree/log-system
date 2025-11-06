@@ -26,6 +26,9 @@ const { authenticationAPIKey } = require('./src/middleware/authService')
 const router_v1 = require('./src/router/v1/routes')
 app.use('/api/logs/v1', authenticationAPIKey, router_v1)
 
+const routerData_v1 = require('./src/router/v1/routesData')
+app.use('/api/data/v1', authenticationAPIKey, routerData_v1)
+
 // App General
 
 app.get('/', (req, res) => {
