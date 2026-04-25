@@ -112,6 +112,7 @@ router.route("/session").post(async (req, res) => {
       reqBody["refresh_token"],
       reqBody["exp_refresh_token"],
       reqBody["device_id"],
+      reqBody["session_data"],
       reqBody["is_active"]
     );
 
