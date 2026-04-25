@@ -13,6 +13,7 @@ class SessionLogObject {
     refresh_token,
     exp_refresh_token,
     device_id,
+    session_data,
     is_active,
     start_date,
     end_date
@@ -28,6 +29,7 @@ class SessionLogObject {
       (this.refresh_token = refresh_token),
       (this.exp_refresh_token = exp_refresh_token),
       (this.device_id = device_id),
+      (this.session_data = session_data),
       (this.is_active = is_active),
       (this.start_date = start_date),
       (this.end_date = end_date);
@@ -51,6 +53,7 @@ class SessionLogObject {
       exp_refresh_token: expRefreshTokenIso.toISOString(),
       device_id: this.device_id,
       is_active: this.is_active,
+      session_data: this.session_data,
     };
 
     return object;
